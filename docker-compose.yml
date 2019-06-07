@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: ./app
+    ports:
+      - "5000:5000"
+    command:
+      - run
+    volumes:
+      - ./app/www:/data/app/www
+      - ./app/tests:/data/app/tests
